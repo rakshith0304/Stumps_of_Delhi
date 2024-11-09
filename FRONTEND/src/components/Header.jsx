@@ -1,18 +1,17 @@
 import React from "react";
-import "../Main.css";
 
 const Header = () => {
   return (
-    <div class="header-main">
-      <div class="left-section">
-        <p class="left-content">Delhi Cricket Community</p>
+    <div className="flex flex-row justify-between items-center h-[70px] shadow-md">
+      <div className="ml-5">
+        <p className="text-2xl font-bold">Delhi Cricket Community</p>
       </div>
-      <div class="right-section">
-        <p class="right-content">Tournamnet Registation</p>
-        <p class="right-content">Chat</p>
-        <p class="right-content">Shop</p>
-        <p class="right-content">About us</p>
-        <p class="right-content">Login</p>
+      <div className="flex flex-row justify-between w-[550px] mr-5">
+        <p className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold">Tournament Registration</p>
+        <p className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold">Chat</p>
+        <p className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold">Shop</p>
+        <p className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold">About us</p>
+        <p className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold">Login</p>
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import SathvikImage from '../assets/images/sathvik.jpg';
 import MukeshImage from '../assets/images/mukesh.jpg';
 import VarshithImage from '../assets/images/varshith.jpg';
 
-const Aboutus_page = () => {
+const AboutUs = () => {
   return (
     <div className="about-us-page bg-customBackground p-8 min-h-screen">
             <h1 className="text-4xl font-bold text-center text-blueColor mb-6">About Us</h1>
@@ -94,4 +94,4 @@ const Aboutus_page = () => {
   )
 }
 
-export default Aboutus_page
+export default AboutUs

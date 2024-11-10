@@ -7,6 +7,7 @@ import PastMatches from "./components/LandingPage/PastMatches";
 import AllPastMatches from "./components/LandingPage/AllPastMatches";
 import FutureMatches from "./components/LandingPage/FutureMatches";
 import AllFutureMatches from "./components/LandingPage/AllFutureMatches";
+import AboutUs from "./components/AboutUs";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/all-past-matches" element={<AllPastMatches />} />
           <Route path="/" element={<FutureMatches />} />
           <Route path="/all-future-matches" element={<AllFutureMatches />} />
+          <Route path="/about-us" element={<AboutUs />} />
         </Routes>
       </div>
     </Router>

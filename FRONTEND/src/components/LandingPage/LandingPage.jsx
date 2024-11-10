@@ -25,7 +25,7 @@ const LandingPage = () => {
 
     {/* Middle Section - 1/3 width for upcoming matches */}
     <div className="flex-1 w-1/3 h-full flex flex-col justify-center items-center">
-        <FutureMatches />
+        {/* <FutureMatches /> */}
     </div>
 
     {/* Right Section - 1/3 width for past matches */}

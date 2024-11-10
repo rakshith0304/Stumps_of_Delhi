@@ -8,7 +8,6 @@ const Header = () => {
       </div>
       <div className="flex flex-row justify-between w-[550px] mr-5">
         <p className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold">Tournament Registration</p>
-        <p className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold">Chat</p>
         <p className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold">Shop</p>
         <p className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold">About us</p>
         <p className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold">Login</p>

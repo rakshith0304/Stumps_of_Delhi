@@ -43,27 +43,28 @@ const LiveScore = () => {
   }, []);
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-lg w-full sm:w-72 mx-auto">
-      <p className="mt-2 text-lg font-bold">Live Score</p>
-      {loading ? (
-        <p>Loading...</p>
-      ) : matchData ? (
-        <div className="text-center">
-          <p className="font-semibold">{matchData.name}</p>
-          <p>{matchData.status}</p>
-          <div className="flex justify-center space-x-4">
-            {matchData.score && matchData.score.map((inning, index) => (
-              <div key={index}>
-                <p>{inning.inning}</p>
-                <p>{inning.r}/{inning.w} in {inning.o} overs</p>
-              </div>
-            ))}
+    <div className="bg-white p-6 rounded-lg shadow-lg w-full sm:w-80 mx-auto mb-6">
+  <p className="mt-2 text-xl font-bold text-blue-700">Live Score</p>
+  {loading ? (
+    <p className="text-center text-gray-500">Loading...</p>
+  ) : matchData ? (
+    <div className="text-center">
+      <p className="font-semibold text-lg">{matchData.name}</p>
+      <p className="text-sm text-gray-500">{matchData.status}</p>
+      <div className="flex justify-center space-x-4 mt-4">
+        {matchData.score && matchData.score.map((inning, index) => (
+          <div key={index}>
+            <p className="font-semibold">{inning.inning}</p>
+            <p>{inning.r}/{inning.w} in {inning.o} overs</p>
           </div>
-        </div>
-      ) : (
-        <p>No live match data available</p>
-      )}
+        ))}
+      </div>
     </div>
+  ) : (
+    <p className="text-center text-gray-500">No live match data available</p>
+  )}
+</div>
+
   );
 };
 

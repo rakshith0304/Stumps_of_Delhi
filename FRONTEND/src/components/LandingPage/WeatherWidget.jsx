@@ -31,24 +31,25 @@ const WeatherWidget = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-lg w-full sm:w-72 mx-auto"> {/* Adjusted size for consistency */}
-      <h2 className="text-xl font-semibold mb-4">Weather in Delhi</h2>
-      <div className="flex items-center justify-between mb-2">
-        <div className="text-lg">{weather.temp_c}°C</div>
-        <img
-          src={`https:${weather.condition.icon}`}
-          alt={weather.condition.text}
-          className="w-12 h-12"
-        />
-      </div>
-      <div className="text-sm text-gray-600">{weather.condition.text}</div>
-      <div className="mt-2">
-        <div>Feels like: {weather.feelslike_c}°C</div>
-        <div>Wind: {weather.wind_kph} kph, {weather.wind_dir}</div>
-        <div>Humidity: {weather.humidity}%</div>
-        <div>Pressure: {weather.pressure_mb} mb</div>
-      </div>
-    </div>
+    <div className="bg-white p-6 rounded-lg shadow-lg w-full sm:w-80 mx-auto mb-6">
+  <h2 className="text-xl font-semibold mb-4 text-blue-700">Weather in Delhi</h2>
+  <div className="flex items-center justify-between mb-2">
+    <div className="text-3xl font-bold">{weather.temp_c}°C</div>
+    <img
+      src={`https:${weather.condition.icon}`}
+      alt={weather.condition.text}
+      className="w-16 h-16"
+    />
+  </div>
+  <div className="text-sm text-gray-600 mb-4">{weather.condition.text}</div>
+  <div className="space-y-2">
+    <div>Feels like: {weather.feelslike_c}°C</div>
+    <div>Wind: {weather.wind_kph} kph, {weather.wind_dir}</div>
+    <div>Humidity: {weather.humidity}%</div>
+    <div>Pressure: {weather.pressure_mb} mb</div>
+  </div>
+</div>
+
   );
 };
 

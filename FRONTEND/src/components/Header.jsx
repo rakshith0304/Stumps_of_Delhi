@@ -1,33 +1,70 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import GoogleAuth from "./GoogleAuth";
 
 const Header = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [username, setUsername] = useState("");
+
   return (
-    <div className="flex flex-row justify-between items-center h-[70px] shadow-md">
-      <div className="ml-5">
+    <div className="flex justify-between items-center h-[70px] shadow-md px-5">
+      {/* Logo Section */}
+      <div className="logoDiv">
         <Link
-          to="/"  // Navigate to home page
-          className="text-2xl font-bold hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50"
+          to="/"
+          className="text-2xl font-bold hover:underline text-blue-800 transition-opacity active:opacity-50"
         >
           Delhi Cricket Community
         </Link>
       </div>
-      <div className="flex flex-row justify-between w-[550px] mr-5">
-        <button className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold">
-          Tournament Registration
-        </button>
-        <button className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold">
-          Shop
-        </button>
+
+      {/* Menu Links */}
+      <div className="menu flex gap-8 pr-20">
         <Link
-          to="/about-us"  // Navigate to About Us page
-          className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold"
+          to="/tournament-registration"
+          className="menuList text-[#6f6f6f] hover:text-blue-800 font-bold transition-opacity active:opacity-50"
         >
-          About us
+          Tournament Registration
         </Link>
-        <button className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold">
-          Login
-        </button>
+        <Link
+          to="/shop"
+          className="menuList text-[#6f6f6f] hover:text-blue-800 font-bold transition-opacity active:opacity-50"
+        >
+          Shop
+        </Link>
+        <Link
+          to="/about-us"
+          className="menuList text-[#6f6f6f] hover:text-blue-800 font-bold transition-opacity active:opacity-50"
+        >
+          About Us
+        </Link>
+
+        {/* Login/Logout Section */}
+        <div className="relative">
+          <li className="menuList text-[#6f6f6f] hover:text-blue-800 font-bold relative group">
+            {isLoggedIn ? username : 'Login'}
+            {/* Show dropdown for Google Login */}
+            {!isLoggedIn && (
+              <div className="absolute bg-white border border-gray-300 rounded-md p-2 hidden group-hover:block">
+                <GoogleAuth
+                  setIsLoggedIn={setIsLoggedIn}
+                  setUsername={setUsername}
+                  showLogin
+                />
+              </div>
+            )}
+            {/* Show dropdown for Logout */}
+            {isLoggedIn && (
+              <div className="absolute bg-white border border-gray-300 rounded-md p-2 hidden group-hover:block">
+                <GoogleAuth
+                  setIsLoggedIn={setIsLoggedIn}
+                  setUsername={setUsername}
+                  showLogout
+                />
+              </div>
+            )}
+          </li>
+        </div>
       </div>
     </div>
   );

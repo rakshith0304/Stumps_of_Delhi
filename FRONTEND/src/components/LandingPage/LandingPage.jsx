@@ -13,9 +13,7 @@ const LandingPage = () => {
         
 
         <div>
-            <div>
-            <RegInput/>
-        </div>
+            
                 <div className="flex h-screen">
     {/* Left Section - 1/3 width */}
     <div className="flex-1 w-1/3 grid grid-cols-1 mb-0 mt-12 h-full">

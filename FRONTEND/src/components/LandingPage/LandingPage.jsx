@@ -5,21 +5,28 @@ import BookVenue from "./BookVenue";
 import WeatherWidget from "./WeatherWidget";
 import FutureMatches from "./FutureMatches";
 import PastMatches from "./PastMatches";
+import RegInput from "../Registration/RegInput"
 
 const LandingPage = () => {
     return (
+
+        
+
         <div>
+            <div>
+            <RegInput/>
+        </div>
                 <div className="flex h-screen">
     {/* Left Section - 1/3 width */}
     <div className="flex-1 w-1/3 grid grid-cols-1 mb-0 mt-12 h-full">
     <div className="flex-1">
-        <LiveScore />
+        {/* <LiveScore /> */}
     </div>
     <div className="flex-1">
-        <WeatherWidget />
+        {/* <WeatherWidget /> */}
     </div>
     <div className="flex-1">
-        <BookVenue />
+        {/* <BookVenue /> */}
     </div>
 </div>
 
@@ -30,12 +37,12 @@ const LandingPage = () => {
 
     {/* Right Section - 1/3 width for past matches */}
     <div className="flex-1 w-1/3 h-full flex flex-col justify-center items-center">
-        <PastMatches />
+        {/* <PastMatches /> */}
     </div>
 </div>
 
 <div className="flex mt-20">
-    <NewsGrid />
+    {/* <NewsGrid /> */}
 </div>
         </div>
         

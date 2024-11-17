@@ -1,3 +1,12 @@
+import React from "react";
+import { useNavigate } from 'react-router-dom';
+
+const Header = () => {
+
+  const navigate = useNavigate(); 
+  const handleShopClick = () => {
+    navigate('/shop'); // Navigate to CartItems page
+};
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import GoogleAuth from "./GoogleAuth";
@@ -17,6 +26,13 @@ const Header = () => {
           Delhi Cricket Community
         </Link>
       </div>
+      <div className="flex flex-row justify-between w-[550px] mr-5">
+        <p className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold">Tournament Registration</p>
+        <p className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold">Chat</p>
+        <div onClick={handleShopClick}><p className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold">Shop</p></div>
+        <p className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold">About us</p>
+        <p className="hover:underline cursor-pointer text-blue-800 transition-opacity active:opacity-50 font-bold">Login</p>
+=======
 
       {/* Menu Links */}
       <div className="menu flex gap-8 pr-20">

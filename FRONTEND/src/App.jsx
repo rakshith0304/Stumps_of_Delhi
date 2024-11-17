@@ -9,6 +9,15 @@ import Confirmation from "./components/Confirmation";
 
 import "./App.css";
 
+
+import Landingpage from "./components/LandingPage/Landingpage";
+import PastMatches from "./components/LandingPage/PastMatches";
+import AllPastMatches from "./components/LandingPage/AllPastMatches";
+import FutureMatches from "./components/LandingPage/FutureMatches";
+import AllFutureMatches from "./components/LandingPage/AllFutureMatches";
+import AboutUs from "./components/AboutUs";
+
+
 const App = () => {
   return (
     <Router>
@@ -21,6 +30,21 @@ const App = () => {
         <Route path="confirmation" element={<Confirmation />}/>
       </Routes>
     </Router>
+=======
+      <div>
+        <Header />
+        <Routes>
+          {/* Define the route for Landingpage */}
+          <Route path="/" element={<Landingpage />} />
+          <Route path="/" element={<PastMatches />} />
+          <Route path="/all-past-matches" element={<AllPastMatches />} />
+          <Route path="/" element={<FutureMatches />} />
+          <Route path="/all-future-matches" element={<AllFutureMatches />} />
+          <Route path="/about-us" element={<AboutUs />} />
+        </Routes>
+      </div>
+    </Router>
+
   );
 };
 

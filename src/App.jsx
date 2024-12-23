@@ -5,8 +5,6 @@ import Shop from "./components/Shop";
 import Cart from "./components/CartItems";
 import Checkout from "./components/Checkout";
 import Confirmation from "./components/Confirmation";
-
-
 import Landingpage from "./components/LandingPage/Landingpage";
 import PastMatches from "./components/LandingPage/PastMatches";
 import AllPastMatches from "./components/LandingPage/AllPastMatches";

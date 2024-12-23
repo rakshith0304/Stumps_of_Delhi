@@ -1,5 +1,6 @@
 {
-  "name": "react-project",
+  "name": "stumps_of_delhi",
+  "homepage": "https://rakshith0304.github.io/Stumps_of_Delhi/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,13 +8,16 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-oauth/google": "^0.12.1",
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.7",
     "gapi-script": "^1.2.0",
+    "gh-pages": "^6.2.0",
     "postcss": "^8.4.47",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
